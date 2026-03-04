@@ -1,0 +1,25 @@
+# Factory Council .gitignore
+
+# Session logs may contain sensitive business context:
+# - Financial details (runway, burn rate, specific numbers)
+# - Strategic decisions not yet public
+# - Personnel discussions
+# - Customer-specific information
+#
+# DECISION FOR THE OPERATOR: Do you want to commit session logs to git?
+#
+# Option A: Keep logs in git (default — nothing below is uncommented)
+#   Advantage: Full history, shareable, version-controlled
+#   Risk: If this repo is public or shared, logs expose business context
+#
+# Option B: Gitignore session logs (uncomment the line below)
+#   Advantage: Sensitive context stays local
+#   Risk: No backup in git, not shareable via repo
+#
+# Uncomment to gitignore session logs:
+# logs/*.md
+
+# Always keep the template and directory structure
+!logs/session-log-template.md
+!logs/handoffs/.gitkeep
+!logs/debates/.gitkeep
