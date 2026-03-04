@@ -46,6 +46,31 @@ This file governs how the three-tier memory system operates across all council s
 **Execution mode:** [parallel / sequential / debate / targeted / review]
 **Agents activated:** [list]
 
+---
+
+## Invocation Audit
+
+| Agent | Method | Timestamp | Reason (if not live) | Confidence modifier |
+|-------|--------|-----------|----------------------|---------------------|
+| Atlas | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Blueprint | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Muse | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Sterling | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Ward | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Orbit | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Sage | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+
+**Synthesis confidence adjustment:**
+- Live agents: [list]
+- Synthesized agents: [list + reason]
+- Deferred agents: [list + reason or "None"]
+- Ceiling applied: [HIGH / MEDIUM / LOW — per invocation-audit-protocol.md scoring table]
+- Net effect: [plain-language summary of what this means for this session's decision quality]
+
+Full schema and scoring rules: `.claude/rules/invocation-audit-protocol.md`
+
+---
+
 ## Agent Outputs Summary
 
 ### [Agent Name]
