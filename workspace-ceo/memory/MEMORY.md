@@ -3,7 +3,7 @@
 
 ## Current Context
 - Council deployed. Phase 1 memory system active.
-- COUNCIL_STATE.md is blank — operator should populate with current company context before first strategic session.
+- COUNCIL_STATE.md is updated — you MUST read for current operational context before first strategic session.
 - All 7 agents activated via `.claude/agents/`. All workspace CLAUDE.md files live.
 - No sessions logged yet. Calibration data is empty.
 
