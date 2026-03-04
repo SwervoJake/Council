@@ -30,10 +30,11 @@ This file governs how the three-tier memory system operates across all council s
 **At the end of every council session:**
 
 1. **Create session log** at `logs/YYYY-MM-DD-[topic].md` using the template below
-2. **Update agent memory files** for any agent whose session produced new patterns or decisions
-3. **Extract strategies** to `shared-knowledge/strategies/[domain].md` for any transferable pattern
-4. **Update COUNCIL_STATE.md** if a decision reached HIGH confidence and is now established doctrine
-5. **Update calibration** at `shared-knowledge/calibration/agent-accuracy.md` if a prediction was tested
+2. **Complete the invocation audit section** — mandatory for every session log. Schema and scoring rules in `.claude/rules/invocation-audit-protocol.md`
+3. **Update agent memory files** for any agent whose session produced new patterns or decisions
+4. **Extract strategies** to `shared-knowledge/strategies/[domain].md` for any transferable pattern
+5. **Update COUNCIL_STATE.md** if a decision reached HIGH confidence and is now established doctrine
+6. **Update calibration** at `shared-knowledge/calibration/agent-accuracy.md` if a prediction was tested
 
 ---
 
