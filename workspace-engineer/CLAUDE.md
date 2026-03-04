@@ -102,7 +102,6 @@ workspace-engineer/memory/
   estimation-accuracy.md          ← Estimate vs. actual tracking
 workspace-engineer/templates/
   adr-template.md
-  architecture-review-template.md
   cost-estimate-template.md
   tradeoff-matrix-template.md
 ```

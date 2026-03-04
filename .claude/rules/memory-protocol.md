@@ -30,10 +30,11 @@ This file governs how the three-tier memory system operates across all council s
 **At the end of every council session:**
 
 1. **Create session log** at `logs/YYYY-MM-DD-[topic].md` using the template below
-2. **Update agent memory files** for any agent whose session produced new patterns or decisions
-3. **Extract strategies** to `shared-knowledge/strategies/[domain].md` for any transferable pattern
-4. **Update COUNCIL_STATE.md** if a decision reached HIGH confidence and is now established doctrine
-5. **Update calibration** at `shared-knowledge/calibration/agent-accuracy.md` if a prediction was tested
+2. **Complete the invocation audit section** — mandatory for every session log. Schema and scoring rules in `.claude/rules/invocation-audit-protocol.md`
+3. **Update agent memory files** for any agent whose session produced new patterns or decisions
+4. **Extract strategies** to `shared-knowledge/strategies/[domain].md` for any transferable pattern
+5. **Update COUNCIL_STATE.md** if a decision reached HIGH confidence and is now established doctrine
+6. **Update calibration** at `shared-knowledge/calibration/agent-accuracy.md` if a prediction was tested
 
 ---
 
@@ -44,6 +45,31 @@ This file governs how the three-tier memory system operates across all council s
 **Date:** YYYY-MM-DD
 **Execution mode:** [parallel / sequential / debate / targeted / review]
 **Agents activated:** [list]
+
+---
+
+## Invocation Audit
+
+| Agent | Method | Timestamp | Reason (if not live) | Confidence modifier |
+|-------|--------|-----------|----------------------|---------------------|
+| Atlas | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Blueprint | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Muse | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Sterling | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Ward | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Orbit | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+| Sage | [live / synthesized / deferred] | [HH:MM UTC or —] | [— or reason] | [baseline or -1 level or N/A] |
+
+**Synthesis confidence adjustment:**
+- Live agents: [list]
+- Synthesized agents: [list + reason]
+- Deferred agents: [list + reason or "None"]
+- Ceiling applied: [HIGH / MEDIUM / LOW — per invocation-audit-protocol.md scoring table]
+- Net effect: [plain-language summary of what this means for this session's decision quality]
+
+Full schema and scoring rules: `.claude/rules/invocation-audit-protocol.md`
+
+---
 
 ## Agent Outputs Summary
 
