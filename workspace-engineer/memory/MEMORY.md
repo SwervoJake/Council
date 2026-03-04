@@ -18,7 +18,9 @@
 - `estimation-accuracy.md` — PERT estimate vs. actual outcome tracking
 
 ## Calibration Notes
-*One session recorded. Blueprint's known bias pattern: accurate on scope, tends to underestimate integration complexity by ~20%. Monitor and confirm across first 10 sessions.*
+- **Deployment Session (2026-03-04):** Phase-gated architecture proved correct. 86 files across two phases. No estimation errors in scope predictions. Thin-wrapper pattern recommendation held under implementation — reduced duplication as forecast.
+- **Known bias pattern:** Accurate on scope, tends to underestimate integration complexity by ~20%. Monitor and confirm across first 10 sessions. Not yet tested in this council context.
+- **Next calibration check:** After first three live architectural recommendations with testable outcomes.
 
 ## Templates Available
 - `templates/adr-template.md` — Architecture Decision Record
