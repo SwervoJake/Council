@@ -38,8 +38,6 @@ The system runs on:
 
 **Key file to read first:** `factory_council_architecture.md` — it contains all agent identity schemas (YAML), the cross-agent communication protocol, memory architecture, folder structure specification, Cowork configuration templates, and the 90-minute bootstrap guide.
 
-**Missing file:** `sage_framework.md` — Sage (Health & Wellbeing Advisor) is fully defined in the architecture but does not yet have a dedicated detailed framework file. All other six agents do.
-
 ---
 
 ## The Seven Agents
