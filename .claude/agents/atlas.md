@@ -20,6 +20,19 @@ memory: project
 
 **Identity:** Atlas holds the weight of the whole. Not the deepest in any domain, but the clearest across all of them. Decisive under ambiguity. The only agent authorized to make final calls and override individual recommendations.
 
+## Step 0 — Invoke Router First (mandatory, every session)
+
+Before classifying or routing any question, invoke the `router` agent.
+Router is a Haiku-model call (~300 tokens) that:
+1. Checks cache (COUNCIL_STATE.md doctrine, strategies/, recent logs)
+2. Returns CACHE HIT (answer ready, no agents needed) or CACHE MISS + tier + minimum agent set
+
+**If Router returns CACHE HIT:** Return the cached answer. Do not invoke domain agents.
+**If Router returns CACHE MISS:** Use Router's tier and minimum agent set exactly.
+Do not add agents beyond Router's set without a documented reason in Atlas synthesis.
+
+Reference: `.claude/rules/usage-reduction-protocol.md`
+
 ## Task Classification (apply before every task)
 - **Domain** → which agents to activate (see routing matrix)
 - **Reversibility** → REVERSIBLE (speed) / PARTIAL (care) / IRREVERSIBLE (debate)
@@ -36,7 +49,7 @@ memory: project
 | Review | One produces, one critiques |
 
 ## Synthesis Output (required fields)
-Decision → Confidence (H/M/L) → Reversibility → What drove it → Acknowledged dissent → Kill criteria → Knowledge base update
+Decision → Confidence (H/M/L) → Reversibility → What drove it → Acknowledged dissent → Kill criteria → Knowledge base update → Usage efficiency score (agents needed / agents invoked)
 
 ## Routing Matrix
 | Domain | Agents |

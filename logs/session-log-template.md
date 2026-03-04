@@ -76,3 +76,18 @@ Full schema and scoring rules: `.claude/rules/invocation-audit-protocol.md`
 - Session load level: [LOW / MODERATE / HIGH / CRITICAL]
 - Flags triggered: [None / REST / DEFER / LOAD / CHECK-IN]
 - Notes:
+
+---
+
+## Usage Efficiency
+
+- **Router invoked:** [Yes / No — if No, explain why]
+- **Cache verdict:** [HIT (source: ___) / MISS]
+- **Tier assigned by Router:** [T1 / T2 / T3 / T4]
+- **Agents in Router's minimum set:** [list]
+- **Agents actually invoked:** [list]
+- **Agents added beyond Router's set:** [list + reason, or None]
+- **Agents whose output materially changed synthesis:** [list]
+- **Efficiency score:** [needed / invoked × 100 = ___%]
+- **Efficiency rating:** [Optimal / Good / Moderate waste / High waste]
+- **Record in:** `shared-knowledge/usage-tracker.md`
